@@ -1,0 +1,13 @@
+//reset
+@use "reset";
+@use 'typography';
+
+//components
+@use "header";
+@use "main";
+@use "footer";
+
+
+//fonts
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:ital,wght@0,300;0,600;1,300;1,600&display=swap');

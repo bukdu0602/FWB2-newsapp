@@ -1,0 +1,21 @@
+@use "sass:math";
+
+// Colors
+$brand-color: #e2cff5;
+$body-bg-color: #e7def0;
+$wrapper-bg-color: white;
+// Text Colors
+$text-color-dark: black;
+$text-color-light: white;
+$menu-color: rgb(220, 134, 228);
+// Fonts
+$body-font: 'EB Garamond', serif;
+$heading-font: 'Jost', sans-serif;
+$nav-font: 'Jost', sans-serif;
+// Typographic Defualts
+$line-height: 1.4;
+$heading-font-weight: 600;
+
+
+// Utility variables
+$lps: '&:hover, &:focus, &:active';
