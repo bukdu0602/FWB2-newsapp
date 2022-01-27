@@ -15,16 +15,16 @@ const Banner = () => {
          async function getNews() {
             console.log("heheheffefeeh")
 
-         const result = await axios.get(`https://newsapi.org/v2/everything?q=Apple&from=2022-01-25&sortBy=popularity&apiKey=${apiKey}`)
-         console.log(result.data.articles)
-         console.log("heheheh")
-         setNews(result.data.articles)
-            // .then(res => {
-            //     const news = res.data;
-            //     setHero(news.articles[0])
-            //     setNews(news.articles.splice(1,13))
-            //     console.log(news.articles[0].title)
-            // })
+         await axios.get(`https://newsapi.org/v2/everything?q=Apple&from=2022-01-25&sortBy=popularity&apiKey=${apiKey}`)
+        //  console.log(result.data.articles)
+        //  console.log("heheheh")
+        //  setNews(result.data.articles)
+            .then(res => {
+                const news = res.data;
+                setHero(news.articles[0])
+                setNews(news.articles.splice(1,13))
+                console.log(news.articles[0].title)
+            })
         }
       
         getNews();
@@ -34,11 +34,22 @@ const Banner = () => {
 
     return (
         <div className='banner'>
-        {news[0].title}
-        {/* {news.map((item)=>{
-            item.title
-        })} */}
-        {/* <h1>{hero.title}</h1> */}
+        {hero && 
+        <div>
+            <figure>
+            <img src={hero.urlToImage} alt="" />
+            </figure>
+
+        </div>
+        
+        }
+
+        {news && news.map((item)=>
+        <div>
+            <p>{item.title}</p>
+            <img src={item.urlToImage} alt="af" />
+        </div>
+        )}
         </div>
     );
 }

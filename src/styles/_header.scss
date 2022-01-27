@@ -9,6 +9,7 @@
                          "nav  nav";
     align-items: center;
     background-color: $wrapper-bg-color;
+    position: relative;
 
     h1 {
         grid-area: logo;
@@ -42,6 +43,8 @@
         justify-self: end;
         margin-right: 20px;
         background-color: $brand-color;
+        position: absolute;
+        top: -5px;
 
     }
     
@@ -56,6 +59,7 @@
         grid-template-rows: 50px auto;
         grid-template-areas: "logo primary btn"
                              "nav    nav   nav";
+        position: relative;
         
         h1 {
             grid-area: logo;
@@ -86,12 +90,17 @@
           
 }
 .show{
+    .main-nav{
+        top: 10px;
+    }
     .nav2{
         grid-area: nav;
         display: flex;
         justify-self: end;
         margin-right: 20px;
         background-color: $brand-color;
+        position: absolute;
+        top: -5px;
     }
 } 
 
