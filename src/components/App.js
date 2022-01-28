@@ -1,16 +1,16 @@
 import '../styles/style.scss'
 import Header from './header'
-import Main from './main'
+import Articles from './Articles'
 import Footer from './footer'
-import Banner from './banner'
+import Hero from './Hero'
 
 
 function App() {
   return (
     <div className="wrapper">
         <Header/>
-        <Banner/>
-        <Main/>
+        <Hero/>
+        <Articles/>
         <Footer/>
     </div>
   );

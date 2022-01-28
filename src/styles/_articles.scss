@@ -1,0 +1,65 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.articles {
+    .cards{
+        display: flex;
+        border: dotted 1px grey;
+        margin-bottom: 15px;
+        figure{
+            margin: 0;
+            img {
+                max-width: 200px;
+                aspect-ratio: 5/5;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 670px){
+    .articles{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        .cards:nth-child(odd){
+            margin-right: 10px;
+        }
+        .cards:nth-child(even){
+            margin-left: 10px;
+        }
+        .cards {
+            display: block;
+
+            figure img {
+                 aspect-ratio: initial;
+                 max-width: 100%;
+                
+            }
+            
+        }
+    }
+}
+
+@media screen and (min-width: 850px){
+    .articles{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        .cards:nth-child(odd){
+            margin-right: 0;
+        }
+        .cards:nth-child(even){
+            margin-left: 0;
+        }
+        .cards:nth-child(3n+1){
+            margin-right: 10px;
+        }
+        .cards:nth-child(3n+2){
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .cards:nth-child(3n+3){
+            margin-left: 10px;
+        }
+    }
+}

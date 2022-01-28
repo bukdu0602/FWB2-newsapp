@@ -1,0 +1,18 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero {
+    display: flex;
+    border: solid 3px black;
+    margin: 20px 0;
+    figure {
+        max-width: 600px;
+        margin: 0;
+        img{
+           display: block;
+        }
+    }
+    span {
+        margin-left: 10px;
+    }
+}

@@ -5,9 +5,9 @@ const Footer = () => {
   
 
     return (
-        <header>
-           Footer
-        </header>
+        <footer>
+        <p>	&copy; 2022 Ryan Lim</p>
+        </footer>
     );
 }
 
