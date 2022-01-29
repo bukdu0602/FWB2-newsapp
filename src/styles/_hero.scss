@@ -10,6 +10,7 @@
         margin: 0;
         img{
            display: block;
+           transition: transform .5s; 
         }
     }
     span {

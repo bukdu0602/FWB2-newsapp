@@ -8,8 +8,9 @@
     grid-template-areas: "logo btn"
                          "nav  nav";
     align-items: center;
-    background-color: $wrapper-bg-color;
+    background-color: $header-color;
     position: relative;
+    padding: 15px;
 
     h1 {
         grid-area: logo;
